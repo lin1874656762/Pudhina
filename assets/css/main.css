@@ -4,10 +4,10 @@
     font-family: 'Quicksand', sans-serif;  
     font-size: 100%;
     color: #012;
-    background-color: #FFF; }
+    background-color: #FFEF;; }
 
   a {
-    color: #012;
+    color: CADETBLUE;
     font-weight: bold;
     text-decoration: none; }
 
@@ -56,10 +56,11 @@
     float: left; }
 
   .logo {
-    font-size: 300%;
+    font-size: 260%;
     font-weight: 700;
-    color: #16a085;
-    display: block; }
+    color: BURLYWOOD;
+    display: block; 
+    border-bottom: 7px solid  BURLYWOOD;}
 
   .menu {
     color: #828282;
@@ -67,7 +68,8 @@
     margin: 0px;
     margin-top: 6px;
     padding: 0px;
-    list-style-type: none; }
+    list-style-type: none; 
+  }
 
   .menu__entry {
     display: inline-block;
@@ -95,7 +97,7 @@
 
   .page-title__text {
     font-weight: 700;
-    font-size: 150%; }
+     }
 
   .page-title__subtitle {
     font-weight: 400;

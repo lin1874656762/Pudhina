@@ -9,6 +9,6 @@ sitemap:
 <img src="{{ '/assets/img/pudhina.jpg' | prepend: site.baseurl }}" id="about-img">
 
 <div id="describe-text">
-	<p>一个简单的，最小的Jekyll主题为个人网页和博客，专注于空白和可读性</p>
-	<p>查看我的<strong> <a href="https://github.com/lin1874656762/lin1874656762.github.io"> 仓库</a> </strong></p>
+	<p>一个在学习路上的新手博客,有关html css php等知识</p>
+	<p>查看我的<strong> <a href="https://github.com/lin1874656762/lin1874656762.github.io"> 远程版本库</a> </strong></p>
 </div>
