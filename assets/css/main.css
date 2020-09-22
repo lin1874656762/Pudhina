@@ -7,7 +7,7 @@
     background-color: #FFEF;; }
 
   a {
-    color: CADETBLUE;
+    color: cadetblue;
     font-weight: bold;
     text-decoration: none; }
 
@@ -58,9 +58,9 @@
   .logo {
     font-size: 260%;
     font-weight: 700;
-    color: BURLYWOOD;
+    color:  burlywood;
     display: block; 
-    border-bottom: 7px solid  BURLYWOOD;}
+    border-bottom: 7px solid  burlywood;}
 
   .menu {
     color: #828282;
