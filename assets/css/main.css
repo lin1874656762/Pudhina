@@ -4,7 +4,7 @@
     font-family: 'Quicksand', sans-serif;  
     font-size: 100%;
     color: #012;
-    background-color: #FFEF;; }
+    background-color: #FFEF; }
 
   a {
     color: cadetblue;
@@ -79,7 +79,11 @@
 
   .menu__entry a {
     font-weight: 400; }
-
+  
+  .menu__entry a:hover{
+    color: black;
+  }
+  
   .social-links {
     float: right;
     font-size: 150%;
