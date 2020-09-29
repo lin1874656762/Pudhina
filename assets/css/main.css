@@ -52,14 +52,12 @@
   .header {
     overflow: hidden; }
 
-  .navigation {
-    float: left; }
-
   .logo {
     font-size: 260%;
     font-weight: 700;
     color:  burlywood;
     display: block; 
+    text-align: center;
     border-bottom: 7px solid  burlywood;}
 
   .menu {
