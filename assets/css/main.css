@@ -5,11 +5,11 @@
     font-size: 100%;
     color: #012;
     background-image:url('../img/bg.jpg');
-    background-size: 100% 100%;
+    background-size: 100% 110%;
   }
 
   a {
-    color: cadetblue;
+    color: aliceblue;
     font-weight: bold;
     text-decoration: none; }
 
@@ -57,10 +57,10 @@
   .logo {
     font-size: 260%;
     font-weight: 700;
-    color:  burlywood;
+    color:  aliceblue;
     display: block; 
     text-align: center;
-    border-bottom: 7px solid  burlywood;}
+    border-bottom: 7px solid  aliceblue;}
 
   .menu {
     color: #828282;
@@ -106,7 +106,7 @@
   .page-title__subtitle {
     font-weight: 400;
     font-size: 75%;
-    color: #828282; }
+    color: black; }
 
 /* =Post teasers *//*************************************************************/
   .list-posts {
@@ -140,7 +140,7 @@
 
 /* =Post page *//*************************************************************/
   .about {
-    color: #828282;
+    color: aliceblue;
     text-align: center;
     line-height: 24px; }
 

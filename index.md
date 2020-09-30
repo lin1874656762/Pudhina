@@ -6,7 +6,7 @@ sitemap:
   priority: 0.9
 ---
 
-<img src="{{ '/assets/img/pudhina.jpg' | prepend: site.baseurl }}" id="about-img">
+<img src="{{ '/assets/img/n.jpg' | prepend: site.baseurl }}" id="about-img">
 
 <div id="describe-text">
 	<p>一个在学习路上的新手博客,有关html css php等知识</p>
