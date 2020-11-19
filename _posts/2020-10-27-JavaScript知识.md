@@ -1,6 +1,6 @@
 ---
 layout: page
-title:  "学习 js"
+title:  " JavaScript知识"
 subtitle: "菜鸟上路"
 date:   2020-09-16 21:21:21 +0530
 categories: ["WEB基础知识"]
@@ -45,19 +45,16 @@ docunment.write(bianliang);//第一次输出8 重复赋值刷新之后输出10
 - 声明一个函数 
  - `function 函数名(){}`
  - input 里的onclick字段是当按钮被点击是执行代码 参数可以是函数() 要加括号 
-```js
+```html
+<script>
 function hanshu(){
   alert('欢迎光临！');//alert（弹窗） 显示带有一条指定消息和一个 OK（确认） 按钮的警告框。
 }
 hanshu();//调用函数 函数不能自动使用 所以要调用
 //网页上会出现一个按钮 点击按钮会有个欢迎光临提示框
 //onclick 当按钮被点击时执行Javascript代码 执行hanshu这个js函数内的功能
-<body>
- <form>
-      <input type="button"  value="点击我" onclick="  hanshu  " />  
-   </form>
-</body>
-
+</script>
+<input type="button"  value="点击我" onclick="  hanshu  " />  
 ```
 
 
@@ -139,7 +136,7 @@ hanshu();//调用函数 函数不能自动使用 所以要调用
     }
   }
 </script>
-
+  <input type = "button" value = "点击我" onclick = "res()">
 ```
 
 
