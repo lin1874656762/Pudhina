@@ -44,7 +44,7 @@ docunment.write(bianliang);//第一次输出8 重复赋值刷新之后输出10
 - js声明一个函数和php一样使用 `function` 函数
 - 声明一个函数 
  - `function 函数名(){}`
-
+ - input 里的onclick字段是当按钮被点击是执行代码 参数可以是函数() 要加括号 
 ```js
 function hanshu(){
   alert('欢迎光临！');//alert（弹窗） 显示带有一条指定消息和一个 OK（确认） 按钮的警告框。
@@ -91,3 +91,55 @@ hanshu();//调用函数 函数不能自动使用 所以要调用
   - document.write(mystr + "<br>");//输出hello 和一个换行符
 - `innerHTML()` 写入HTML元素
 - `console.log()` 写入浏览器控制台
+
+
+## js警告（alert 消息对话框）
+
+- 它是什么：我们在访问网站的时候，有时会突然弹出一个小窗口，上面写着一段提示信息文字。如果你不点击“确定”，就不能对网页做任何操作，这个小窗口就是使用alert实现的 就是弹出一个警告框
+
+- alert(字符串或变量); 
+ - alert弹出消息对话框(包含一个确定按钮)。
+ - 如果有多个alert 则按它们定义的先后顺序弹出
+ - 在点击alert的确定按钮时
+ - 消息对话框通常可以用于调试程序。
+ - alert输出内容，可以是字符串或变量，与document.write 相似。
+
+ - 怎么实现点击按钮就弹出一个对话框
+  - 在js中声明一个函数 
+  - 然后在html中写一个input按钮 加一个onclick="函数名" 即可
+```html
+<script>
+  function res(){
+    var a = "这是弹出消息框";
+    alert(a + "欢迎━(*｀∀´*)ノ亻!");
+  }
+</script>
+
+<input name="a" type="button" value="点击我弹出对号框！" onclick = "res()" >
+
+```
+
+
+## js确认 (confirm 消息对号框) 
+- confirm(字符串)：参数是在对话框中要显示的内容 
+- 返回值：bool值 根据你在if判断定义的true区间和false区间输出代码
+ - 当用户点击确定时返回true区间的代码
+ - 当用户点击取消时返回false区间的代码
+- 消息对话框是排它的，即用户在点击对话框按钮确定或取消前，不能进行任何其它操作。
+```html
+
+<script>
+  function res() {
+    var str = "你觉得js好学吗";
+    confirm(str);
+    if(str == true) {
+      document.write("好学" + "呢！");
+    } else {
+      document.write("不好学！");
+    }
+  }
+</script>
+
+```
+
+
