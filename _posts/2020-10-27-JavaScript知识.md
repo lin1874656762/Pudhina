@@ -68,7 +68,7 @@ hanshu();//调用函数 函数不能自动使用 所以要调用
 
 ```
 
-## js 输出
+### js 输出
 - 数据显示 js中有不同的显示数据的方式
 - `window.alert()` 写入警告框 
  - 警告框就是你打开网页 一个提示框会出来
@@ -90,7 +90,7 @@ hanshu();//调用函数 函数不能自动使用 所以要调用
 - `console.log()` 写入浏览器控制台
 
 
-## js警告（alert 消息对话框）
+### js弹出警告框（alert 消息对话框）
 
 - 它是什么：我们在访问网站的时候，有时会突然弹出一个小窗口，上面写着一段提示信息文字。如果你不点击“确定”，就不能对网页做任何操作，这个小窗口就是使用alert实现的 就是弹出一个警告框
 
@@ -117,17 +117,16 @@ hanshu();//调用函数 函数不能自动使用 所以要调用
 ```
 
 
-## js确认 (confirm 消息对号框) 
-- confirm(字符串)：参数是在对话框中要显示的内容 
+### js弹出确认框 (confirm 消息对号框) 
+- confirm(参数：字符串)：参数字符串是在对话框中要显示的内容 
 - 返回值：bool值 根据你在if判断定义的true区间和false区间输出代码
  - 当用户点击确定时返回true区间的代码
  - 当用户点击取消时返回false区间的代码
 - 消息对话框是排它的，即用户在点击对话框按钮确定或取消前，不能进行任何其它操作。
 ```html
-
 <script>
   function res() {
-    var str = "你觉得js好学吗";
+    var str =confirm("你觉得js好学吗");
     confirm(str);
     if(str == true) {
       document.write("好学" + "呢！");
@@ -140,3 +139,105 @@ hanshu();//调用函数 函数不能自动使用 所以要调用
 ```
 
 
+### js弹出提问框(prompt 消息对话框)
+- ``prompt``意义：弹出消息对话框,通常用于询问一些需要与用户交互的信息。弹出消息对话框（包含一个确定按钮、取消按钮与一个文本输入框）。
+- ``prompt``(参数1，参数2);
+ - 参数1：要显示在消息对话框中的文本，不可修改 就是弹出的对话框提示的内容
+ - 参数2：显示在要输入的文本框的内容  就是文本框的默认值 就是默认输入的内容
+ - 返回值:点击确定按钮，会返回的文本框的内容; 点击取消，将返回null
+- 在点击对话框的按钮前（确定或取消），不能进行任何其他操作
+```html
+  <script>
+    function hanshu() {
+      var bianliang;
+      bianliang=prompt("请输入你的年龄");
+      if(bianliang >= 50) {
+        alert("您已经步入老年");
+      }else if(bianliang >=30 ) {
+        document.write("您已经步入中年");
+      }else if(bianliang>=18) {
+        document.write("您好！青年人");
+      }else {
+        alert("未满十八岁可不能玩太久游戏哦！");
+      }
+    }
+  </script>
+```
+
+### js打开新窗口(window.open)
+- open() 方法可以查找一个已经存在或者新建的浏览器窗口。
+- 语法：``window.open``(参数1：URL, 参数2：窗口名称, 参数3：参数字符串)
+ - 参数：
+ - ``URL``:可选参数，在窗口中要显示网页的网址或路径。如果省略这个参数，或者它的值是空字符串，那么窗口就不显示任何文档。
+ - ``窗口名称``：可选参数，被打开窗口的名称。
+  - 1.该名称由字母、数字和下划线字符组成。
+  - 2.``_top``、``_blank``、``_self``具有特殊意义的名称。
+   - _top：框架网页中在上部窗口中显示目标网页
+   - _blank：在新窗口显示目标网页
+   - _self：在当前窗口显示目标网页
+  - 3.相同 name(参数2的值) 的窗口只能创建一个，要想创建多个窗口则 name 不能相同。
+   - 参数2的值不能包含空格
+ - ``参数字符串``：设置窗口参数，各参数用逗号隔开。
+  - ``top``
+   - 值：数字值
+   - 说明：窗口顶部离开屏幕顶部的像素数px（窗口与顶部的边距）
+  - ``left``:
+   - 值：数字值
+   - 说明：窗口左端离开屏幕左端的像素数(窗口与左边的边距) 也就是加上top这两个参数用来调整位置的
+  - ``width``:要显示的窗口宽度
+  - ``height``:要显示的窗口高度
+  - ``menubar``:
+   - 值：yes or no 只能选择这个两个
+   - 说明：窗口需不需要显示菜单栏
+  - ``toolbar``:
+   - 值：yes or no 
+   - 说明：窗口需不需要显示工具条
+  - ``scrollbars``:
+   - 值：yes or no
+   - 说明：窗口需不需要显示滚动条
+  - ``status``:
+   - 值：yes or no
+   - 说明：窗口需不需要显示状态栏
+- 例如:打开打开http://www.baidu.com网站，大小为300px * 200px，无菜单，无工具栏，无状态栏，有滚动条窗口：
+```html
+<script type="text/javascript"> 
+function Wopen() {
+window.open('http://www.imooc.com','_blank','width=300,height=200,menubar=no,toolbar=no, status=no,scrollbars=yes')
+}
+    <input name="button" type="button" onClick="Wopen()" value="点击我，打开新窗口!" / >
+</script>
+```
+
+### js关闭窗口(window.close)
+- ``close()`` 关闭窗口
+- 用法：
+ - window.close(); 关闭本窗口
+ - 打开的窗口(变量或网址).close();  关闭打开的窗口
+
+- 例如:关闭新建的窗口。
+```html
+<script type="text/javascript">
+   var mywin=window.open('http://www.imooc.com'); //将新打的窗口对象，存储在变量mywin中
+   mywin.close();
+</script>
+```
+
+### js通过id获取元素（ document.getElementById('要获取的id值') ）
+- 网页由标签将信息组织起来，而标签的id属性值是唯一的，就像是每人有一个身份证号一样，只要通过身份证号就可以找到相对应的人。那么在网页中，我们通过id先找到标签，然后进行操作。
+- 注:获取的元素是一个对象，如想对元素进行操作，我们要通过它的属性或方法。
+
+### js innerHTML 属性
+- innerHTML 属性用于获取或替换 HTML 元素的内容。
+- 语法：Object（对象）.innerHTML = "要改变的内容"
+ - 1.Object是获取的元素对象，如通过document.getElementById("ID")获取的元素。
+ - 2.注意书写，innerHTML区分大小写。
+```html
+<h2 id="con">javascript</H2>
+<p> JavaScript是一种基于对象、事件驱动的简单脚本语言，嵌入在HTML文档中，由浏览器负责解释和执行，在网页上产生动态的显示效果并实现与用户交互功能。</p>
+<script type="text/javascript">
+  var mychar=document.getElementById('con');           ;
+  document.write("原标题:"+mychar.innerHTML+"<br>"); //输出原h2标签内容
+  mychar.innerHTML="Hello Word!";
+  document.write("修改后的标题:"+mychar.innerHTML); //输出修改后h2标签内容
+</script>
+```
