@@ -6,6 +6,12 @@ date:   2020-09-16 21:21:21 +0530
 categories: ["WEB基础知识"]
 ---
 
+## JS基础介绍
+### 环境（编译代码的工具）
+- 浏览器内置的js解析模块----Javascript（前端唯一语言）
+- node--- node.js（后端语言）
+- 可以理解为两种语言
+- 均基于ECMAscript语法 简称es
 
 ## 语法规范
 - 如何在html中编写js
@@ -29,6 +35,23 @@ categories: ["WEB基础知识"]
    - 可以重复赋值
    - 重复赋值之后会覆盖前面的值
 
+  - 数据类型
+  - 默认值--undefined
+  - bool
+  - Number
+  - String
+  - Array
+   - `声明一个数组：var a = ["元素","不同的元素用逗号相隔"]`;
+   - `遍历数组：for(var i=0; i<arr.length; i++) {}`
+   - `取数据：a[0] key值`
+
+  - Object (var a = {a:10; b: function() {}}) 值可以是任意类型
+   - 声明对象: `var obj = {a: 10; b: function(){}, c: "asdsa"}`
+   -  for (var i in obj) {}  用in
+   99
+   -  obj.a
+  - Function 
+
 ```html
 
 <script>
@@ -39,6 +62,22 @@ docunment.write(bianliang);//第一次输出8 重复赋值刷新之后输出10
 </script>
 
 ```
+
+## 代码执行逻辑
+- 分支
+- 循环(for)
+
+## 函数的封装
+## 类与对象
+## 常见的内置函数以及第三方常用的包
+
+# 小程序要学的内容
+## 数据绑定
+- bingtap="函数名" js文件当中的page当中的函数名
+## 数据渲染
+## 事件绑定
+## 生命周期
+
 
 ## js函数
 - js声明一个函数和php一样使用 `function` 函数
@@ -242,3 +281,40 @@ window.open('http://www.imooc.com','_blank','width=300,height=200,menubar=no,too
   document.write("修改后的标题:"+mychar.innerHTML); //输出修改后h2标签内容
 </script>
 ```
+
+## 改变html样式
+- 语法：Object.style.property=new style;
+ - Object:要改变的html元素对象 获取id的 如通过document.getElementById("id")获取的元素。
+ - .style：必填字段
+ - property：css属性表（color，backgroundColor，font-size，width，height等）
+ - new style：你要改变的属性值（颜色，大小，宽度值等）
+ - document.getElementById("id");
+
+```html
+<script>
+<h2 id="con">I love JavaScript</h2>
+  <p> JavaScript使网页显示动态效果并实现与用户交互功能。</p>
+  <script type="text/javascript">
+    var mychar= document.getElementById("con");
+    mychar.style.color = red;
+    mychar.style.backgroundColor = #CCC;
+    mychar.style.width = 300px;
+</script>
+```
+
+## 显示隐藏元素（object.style.display = none（或block））
+- 网页中经常会看到显示和隐藏的效果，可通过display属性来设置。
+- 语法：Object.style.display = value
+- Object是获取的元素对象，如通过document.getElementById("id")获取的元素。
+- style：必填
+- display：必填
+- value：none隐藏 block显示
+
+## 控制类名className
+- className 属性设置或返回元素的class 属性。
+- 语法：object.className = classname
+ - object：获取的对象（document.getElementById("id")获取的id）
+ - .className:必填
+ - classname:名字（你要修改的class选择器名）
+- 作用：获取元素的class 属性
+- 为网页内的某个元素指定一个css样式来更改该元素的外观
