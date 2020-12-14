@@ -48,6 +48,7 @@ categories: ["WEB基础知识"]
   - Object (var a = {a:10; b: function() {}}) 值可以是任意类型
    - 声明对象: `var obj = {a: 10; b: function(){}, c: "asdsa"}`
    -  for (var i in obj) {}  用in
+   - 获取对象下的某个字段值 对象名.对象下的字段名
    99
    -  obj.a
   - Function 
@@ -66,6 +67,66 @@ docunment.write(bianliang);//第一次输出8 重复赋值刷新之后输出10
 ## 代码执行逻辑
 - 分支
 - 循环(for)
+
+## 复合数据类型的学习
+- 声明
+- 对元素的增 删 改 查（查看属性值）
+- 遍历
+- 常用的函数
+- 字符串化与反字符串化
+
+- 数组和对象都是复合类
+  - 同类事物的集合的时候用数组 数组的key是有顺序的
+  - 描述一位事物的时候用对象 
+
+
+```javascript
+//Array
+//声明
+var arr = ["1","2","3"];
+
+//数组的增删改查
+//增 只能在数组最后一位增 本来三位 0 1 2 加一位就要从3开始
+arr[3] = "4";
+
+//删
+
+//改 需要改的数组key=需要改的数组value
+arr[2] ="5";
+
+//查 用一个变量保存你要查数组那个位置（key）的值
+var temp = arr[1];
+
+//遍历
+for(var i = 0; i<arr.length; i++> ){
+  console.log(i);
+}
+
+//object
+var vbj = {
+  shanggao: 175;
+  tizhon: "48kg";
+  fuse : white;
+}
+
+//对象的增删改查
+
+//增
+obj.age = 20;
+
+//删
+delete obj.tizhon;
+
+//改 对象名.要改的key键 = 要改的值;
+obj.fuse = "yellow";
+
+//查 用一个变量保存 对象名.要查询的key
+var temp = obj.fuse;
+
+//遍历
+for(var i in obj) {}
+
+```
 
 ## 函数的封装
 ## 类与对象
