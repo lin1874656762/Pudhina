@@ -133,10 +133,46 @@ for(var i in obj) {}
 ## 常见的内置函数以及第三方常用的包
 
 # 小程序要学的内容
+
+
 ## 数据绑定
 - bingtap="函数名" js文件当中的page当中的函数名
 ## 数据渲染
+
 ## 事件绑定
+ - 事件的执行顺序
+  - 捕获 从顶部开始依次寻找该事件的句柄 onclick
+   - 如果有 把它放在一个栈中 先进后出 后进先出 叠起来
+  - 冒泡 执行这个栈(onclick)的函数 依次执行 也就是出栈
+   - 阻止冒泡（三种方法）：
+    - event.stopImmediatePropagation(); 执行第一个事件处理程序，并阻止剩下的事件处理程序被执行：
+    - event.cancelBubble=true; 取消冒泡 本来event对象为false不取消 变成true则取消其他冒泡
+    - event.stopPropagation(); 终止事件在传播过程的捕获、和冒泡
+ - 事件绑定：给一个节点添加一个事件属性
+## DOM 操作
+  - 文档对象模型DOM（Document Object Model）定义访问和处理HTML文档的标准方法。DOM 将HTML文档呈现为带有元素、属性和文本的树结构（节点树）。
+  - DOM节点分为三大类：元素节点、属性节点、文本节点； 
+   - 文本节点、属性节点属于元素节点的子节点。
+   -  文本节点和属性节点就像是这颗DOM树的果子，而元素节点就是树枝，所以，在操作时，一定要要记顺枝摘果：得先取到元素节点！然后再操作子节点！！ 一定要先取元素节点！！ 一定要先取元素节点！！
+  - 怎么获取元素节点(树枝)
+   - 可以用使用getElement系列方法，取到元素节点。
+   - `getElementById("id名")`  返回带有指定id的元素
+   - `getElementsByTagName("html标签名")`  返回包含带有指定标签名的所有元素的节点集合/节点数组
+   - `getElementsByClassName("class类名")` 返回带有指定类名的所有元素的节点集合
+   - `getElementsByName("name名/值")` 返回带有指定名称的节点对象的集合 如input里的name
+   - `appendChild()` 把新的子节点添加到指定节点
+   - `removeChild()` 删除子节点
+   - `replaceChild()` 替换子节点
+   - `cloneNode()` 复制子节点
+   - `insertBefore()` 在指定的子节点前面插入新的子节点
+   - `getAttribute()` 返回指定的属性值(查看属性节点) 比如参数是class的话 返回class名 id的话 返回id名
+   - `setAttribute()` 把指定属性设置或修改为指定的值（设置 修改属性节点）
+   - `createAttribute()` 创建属性节点 
+   - `createElement("元素标签")` 创建元素节点 html标签 就是html文档里，所有的标签都可以称之为元素
+   - `createTexNode("文本内容")` 创建文本节点 text
+   - `onmouseover` 鼠标悬停事件
+   - `onmouseout` 鼠标离开事件
+
 ## 生命周期
 
 
